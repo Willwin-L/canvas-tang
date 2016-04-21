@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>糖葫芦</title>
+</head>
+<body>
+    <canvas id="canvas" width="600" height="600"></canvas>
+    
+    <script>
+        var can = document.getElementById('canvas');
+        var con = can.getContext('2d');
+        
+        con.fillStyle = 'red';
+        
+        function san(x,y,r,sAngle,eAngle,counterclockwise,i){
+            con.beginPath();
+            con.arc(x+80,y+80,50,0,2*Math.PI,false)
+            con.closePath();
+            con.fill();
+        }
+        
+        for(var i=0;i<5;i++){
+            san(200,20+i*80,i);
+        }
+        
+        con.fillStyle = '#998844';
+        //x,y,宽,高
+        con.fillRect(270,i*94,20,150)
+    </script>
+</body>
+</html>
